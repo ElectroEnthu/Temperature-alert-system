@@ -8,11 +8,11 @@ while True:
        temperature = (100*sensor_value)/1024
        print ("Current temperature value is:" + str(temperature) + " ℃")
 
-       if temperature < 50:
+       if temperature > 50:
            on = mybolt.digitalWrite('0', 'HIGH')
            print(on)
            time.sleep(10)
-       elif temperature > 50:
+       elif temperature < 50:
            off = mybolt.digitalWrite('0', 'LOW')
            print(off)
            time.sleep(10)
